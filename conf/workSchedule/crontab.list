@@ -1,0 +1,122 @@
+#S M H D M Y W C
+#****应用备份*******************************************************
+#游戏大厅
+0 00 4 * * * * EGAP/App/EGAP_ClientAutomatic.xml
+0 01 4 * * * * EGAP/App/EGAP_ClientPublish.xml
+0 02 4 * * * * EGAP/App/EGAP_DataSync.xml
+0 03 4 * * * * EGAP/App/EGAP_ECMS.xml
+0 04 4 * * * * EGAP/App/EGAP_HallPortal.xml
+0 05 4 * * * * EGAP/App/EGAP_HTML5.xml
+0 06 4 * * * * EGAP/App/EGAP_Land-Interface.xml
+0 07 4 * * * * EGAP/App/EGAP_OldVersion.xml
+0 08 4 * * * * EGAP/App/EGAP_ResourceCache.xml
+0 09 4 * * * * EGAP/App/EGAP_SecureProxy.xml
+0 10 4 * * * * EGAP/App/EGAP_SerAutomatic.xml
+0 11 4 * * * * EGAP/App/EGAP_smsTransform.xml
+0 12 4 * * * * EGAP/App/EGAP_TokenService.xml
+0 13 4 * * * * EGAP/App/EGAP_UaAutomatic.xml
+0 14 4 * * * * EGAP/App/EGAP_UserAutomatic.xml
+0 15 4 * * * * EGAP/App/EGAP_SecureProxy4.xml
+0 16 4 * * * * EGAP/App/EGAP_HallPortal4.xml
+0 17 4 * * * * EGAP/App/EGAP_GHCMS.xml
+#游戏圈圈
+#0 18 4 * * * * EGSNS/App/EGSNS_home.xml
+0 19 4 * * * * EGSNS/App/EGSNS_interface.xml
+0 20 4 * * * * EGSNS/App/EGSNS_pcgame.xml
+0 21 4 * * * * EGSNS/App/EGSNS_pcpay.xml
+0 22 4 * * * * EGSNS/App/EGSNS_spbbs.xml
+0 23 4 * * * * EGSNS/App/EGSNS_mng.xml
+#个人中心
+0 24 4 * * * * EGUC/App/EGUC_sso.xml
+0 25 4 * * * * EGUC/App/EGUC_egservice.xml
+#弱联网
+0 26 4 * * * * EGSGS/App/EGSGS_CMGCenter.xml
+0 27 4 * * * * EGSGS/App/EGSGS_mng.xml
+#统一SDK服务
+0 28 4 * * * * EGSDK/App/EGSDK_sdkserver.xml
+0 29 4 * * * * EGSDK/App/EGSDK_weico.xml
+#门户系统
+0 30 4 * * * * EGCMS_WAP/App/EGCMS_WAP_FRONT.xml
+0 31 4 * * * * EGCMS_WAP/App/EGCMS_WapWabao.xml
+0 32 4 * * * * EGCMS_WAP/App/EGCMS_WAP_BACKEND.xml
+0 33 4 * * * * EGCMS_WAP/App/EGCMS_WAP_DATASYNC.xml
+0 34 4 * * * * EGCMS_WAP/App/EGCMS_WAP_RESOURCE.xml
+0 35 4 * * * * EGCMS_WWW/App/EGCMS_WWW_BACKEND.xml
+0 36 4 * * * * EGCMS_WWW/App/EGCMS_WWW_RESOURCE.xml
+0 37 4 * * * * EGCMS_SMS/App/EGCMS_SMS_BACKEND.xml
+0 38 4 * * * * EGCMS_SMS/App/EGCMS_SMS_ENGINE.xml
+0 39 4 * * * * EGCMS_SMS/App/EGCMS_SMS_INTERFACE.xml
+0 40 4 * * * * EGCMS_SMS/App/EGCMS_SMS_PUSH.xml
+0 41 4 * * * * EGCMS_SMS/App/EGCMS_SMS_WANJIA.xml
+#服务总线
+0 42 4 * * * * EGIB/App/EGIB_Standard.xml
+0 43 4 * * * * EGIB/App/EGIB_Gateway.xml
+0 44 4 * * * * EGIB/App/EGIB_Mtk.xml
+0 45 4 * * * * EGIB/App/EGIB_Abilityout.xml
+0 46 4 * * * * EGIB/App/EGIB_DistributionSer.xml
+0 47 4 * * * * EGIB/App/EGIB_InterfaceManager.xml
+0 48 4 * * * * EGIB/App/EGIB_Hallchannel.xml
+0 49 4 * * * * EGIB/App/EGIB_Singlelogin-cas.xml
+0 50 4 * * * * EGIB/App/EGIB_CasPortal.xml
+0 51 4 * * * * EGIB/App/EGIB_CamsManager.xml
+0 52 4 * * * * EGIB/App/EGIB_GWabilityInterface.xml
+0 53 4 * * * * EGIB/App/EGIB_Smschannel.xml
+0 54 4 * * * * EGIB/App/EGIB_SmsDistributionSer.xml
+0 55 4 * * * * EGIB/App/EGIB_Resource.xml
+#渠道系统
+0 55 4 * * * * EGCMC/App/EGCMC_Management.xml
+0 56 4 * * * * EGCMC/App/EGCMC_Interface.xml
+0 57 4 * * * * EGCMC/App/EGCMC_SerInterface.xml
+#经分系统
+0 58 4 * * * * EGBI/App/EGBI_Statements.xml
+0 58 4 * * * * EGBI/App/EGBI_Statements_resource.xml
+0 58 4 * * * * EGBI/App/EGBI_GameTopList.xml
+0 37 14 * * * * EGBI/App/EGBI_Mobapp.xml
+#0 59 4 * * * * EGBI/App/EGBI_Datastage.xml在本机上rsync，此网络不通
+#营销平台
+0 00 5 * * * * EGMM/App/EGMM_ERMMMGR.xml
+0 01 5 * * * * EGMM/App/EGMM_EGMMINT.xml
+0 02 5 * * * * EGMM/App/EGMM_EGMMAPP.xml
+0 03 5 * * * * EGMM/App/EGMM_EGMMSMS.xml
+0 04 5 * * * * EGMM/App/EGMM_EGMMMMS.xml
+0 05 5 * * * * EGMM/App/EGMM_EGMMFINT.xml
+#精确营销
+0 06 5 * * * * EGPM/App/EGPM_BDP.xml
+0 07 5 * * * * EGPM/App/EGPM_INTF.xml
+0 08 5 * * * * EGPM/App/EGPM_ZNTJ.xml
+#乐豆
+0 09 5 * * * * EGUV/App/EGUV_Interface.xml
+0 10 5 * * * * EGUV/App/EGUV_Management.xml
+#MTK平台
+0 11 5 * * * * EGMTK/App/EGMTK_BACKEND.xml
+0 12 5 * * * * EGMTK/App/EGMTK_GPA.xml
+0 13 5 * * * * EGMTK/App/EGMTK_OTA.xml
+0 14 5 * * * * EGMTK/App/EGMTK_AINT.xml
+0 15 5 * * * * EGMTK/App/EGMTK_INTERFACE.xml
+#防篡改
+#客服工单
+0 16 5 * * * * EOMS/App/EOMS_CmgpRoute.xml
+0 17 5 * * * * EOMS/App/EOMS_Jseoms.xml
+0 18 5 * * * * EOMS/App/EOMS_Mng.xml
+0 19 5 * * * * EOMS/App/EOMS_HttpInterface.xml
+0 20 5 * * * * EOMS/App/EOMS_FtpInterface.xml
+#积分上传
+#游戏梦工厂
+0 17 5 * * * * EGGE/App/EGGE_GBR.xml
+0 18 5 * * * * EGGE/App/EGGE_EDITOR.xml
+0 19 5 * * * * EGGE/App/EGGE_DOWNLOAD.xml
+#产品库项目
+0 20 5 * * * * EGPDC/App/EGPDC_Mng_80.xml
+0 21 5 * * * * EGPDC/App/EGPDC_Mng_81.xml
+0 22 5 * * * * EGPDC/App/EGPDC_uncomm.xml
+0 23 5 * * * * EGPDC/App/EGPDC_Gsigned.xml
+0 24 5 * * * * EGPDC/App/EGPDC_SearchService.xml
+#公测系统
+0 24 5 * * * * EGGC/App/EGGC_StandardGC.xml
+#数据外放
+#8467短信
+#玩家乐园
+#运维支撑系统
+0 25 5 * * * * omcScriptBackup/appscriptbackup/omcScriptBackup_appscriptbackup.xml
+0 25 5 * * * * omcScriptBackup/logscriptbackup/omcScriptBackup_logscriptbackup.xml
+#运维监控系统

@@ -1,0 +1,14 @@
+<devGroups timeout='30'>
+    <devGroup groupName='EGCMS_WWW_BACKEND' devEntry='ssh =username=@=ip=' enable='0'>
+        <devSeq>
+            <dev devName='EGCMS-WWWMNT-40-138.nd.cmgame.com' ip='192.168.40.138' password='' server='192.168.47.25' username='service' devPrompt='.*]\$'></dev>
+	</devSeq>
+        <cmdSeq>
+            <cmd seq='1' expect='=devPrompt=' send='date=`date +%Y%m%d -d"-0 day"`'></cmd>
+	    <cmd seq='1' expect='=devPrompt=' send='echo $date'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='rsync -azu --exclude=logs/* --exclude=log/* --exclude=temp/* --exclude=backup/* --exclude=*.log --exclude=backup/* --exclude=nohup.out --exclude=pangu/* --exclude=filecache/* /apps/service/emagsoftware =server=::data/EGCMS_WWW/BackEnd/=ip=_emagsoftware$date'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='rsync -azu /apps/service/emagsoftware --exclude=pangu/* =server=::data/EGCMS_WWW/BackEnd/=ip=_resource'></cmd>
+	    <cmd seq='1' expect='=devPrompt=' send='exit'></cmd>
+	</cmdSeq>
+    </devGroup>
+</devGroups>

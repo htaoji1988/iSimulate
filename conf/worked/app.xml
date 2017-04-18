@@ -1,0 +1,25 @@
+<devGroups timeout='30'>
+    <devGroup groupName='APP' devEntry='ssh =username=@=ip=' enable='0'>
+        <devSeq>
+            <dev devName='CHECK' ip='192.168.40.150' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.40.151' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.40.152' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.40.153' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.40.154' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.40.155' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.40.156' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.40.157' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.40.158' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.40.159' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.45.159' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+            <dev devName='CHECK' ip='192.168.40.160' password='iN5!Yd#T' username='service' devPrompt='.*]\$'></dev>
+        </devSeq>
+        <cmdSeq>
+            <cmd seq='1' expect='=devPrompt=' send='find . -type f -name "*.log" -user service'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='netstat -anup'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='ll'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='df -h'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='exit'></cmd>
+        </cmdSeq>
+    </devGroup>
+</devGroups>

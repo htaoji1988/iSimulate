@@ -1,0 +1,14 @@
+<devGroups timeout='30'>
+    <devGroup groupName='omcScriptBackup' devEntry='ssh =username=@=ip=' enable='0'>
+      	<devSeq>
+            <dev devName='autopublish1-47-31.nd.cmgame.com' ip='192.168.47.31' password='' server='192.168.47.25' username='service' devPrompt='.*]\$'></dev>
+	</devSeq>
+        <cmdSeq>
+            <cmd seq='1' expect='=devPrompt=' send='date=`date +%Y%m%d -d"-0 day"`'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='echo $date'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='rsync -azu --exclude=result/* --exclude=logs/* --exclude=temp/* /apps/service/omcScript =server=::data/omcScriptBackup/appscriptbackup/=ip=_emagsoftware$date'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='rsync -azu --exclude=result/* --exclude=logs/* --exclude=temp/* /apps/service/.ssh/ =server=::data/omcScriptBackup/appsshbackup/=ip=_emagsoftware$date'></cmd>
+	    <cmd seq='1' expect='=devPrompt=' send='exit'></cmd>
+	</cmdSeq>
+    </devGroup>
+</devGroups>

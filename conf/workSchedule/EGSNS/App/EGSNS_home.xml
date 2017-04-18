@@ -1,0 +1,17 @@
+﻿<devGroups timeout='30'>
+    <devGroup groupName='EGSNS_home' devEntry='ssh =username=@=ip=' enable='0'>
+        <devSeq>
+            <dev devName='EGSNS-APP-40-40.nd.cmgame.com ' ip='192.168.40.40' password='' server='192.168.47.25' username='service' devPrompt='.*]\$'></dev>
+        </devSeq>
+        <cmdSeq>
+            <cmd seq='1' expect='=devPrompt=' send='date=`date +%Y%m%d -d"-0 day"`'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='echo $date'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='rsync -azu --exclude=log/* --exclude=logs/* --exclude=temp/* --exclude=backup/* --exclude=home/data/* --exclude=nohup.out --exclude=*.log --exclude=flash/* --exclude=attachment/* /apps/service/emagsoftware =server=::data/EGSNS/home/=ip=_emagsoftware$date'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='rsync -azu --exclude=log/* --exclude=logs/* --exclude=temp/* /apps/usr/apache =server=::data/EGSNS/home/=ip=_apache'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='rsync -azu --exclude=log/* --exclude=logs/* --exclude=temp/* /apps/service/emagsoftware/phpapps/home/data =server=::data/EGSNS/home/=ip=_resource'></cmd>
+	    <cmd seq='1' expect='=devPrompt=' send='rsync -azu --exclude=log/* --exclude=logs/* --exclude=temp/* /apps/service/emagsoftware/phpapps/home/flash =server=::data/EGSNS/home/=ip=_resource'></cmd>
+	    <cmd seq='1' expect='=devPrompt=' send='rsync -azu --exclude=log/* --exclude=logs/* --exclude=temp/* /apps/service/emagsoftware/phpapps/home/attachment =server=::data/EGSNS/home/=ip=_resource'></cmd>
+            <cmd seq='1' expect='=devPrompt=' send='exit'></cmd>
+        </cmdSeq>
+    </devGroup>
+</devGroups>

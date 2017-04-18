@@ -1,0 +1,13 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+#EGAP_ClientAutomatic,EGAP-END-40-21.nd.cmgame.com,192.168.40.21,ssh service@192.168.40.21
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+Last login: Tue Jun  2 04:00:00 from 192.168.47.31
+Authorized users only.All activity may be monitored and reported. 
+[service@EGAP-END-40-21 ~]$ date=`date +%Y%m%d -d"-0 day"`
+[service@EGAP-END-40-21 ~]$ echo $date
+20150603
+[service@EGAP-END-40-21 ~]$ rsync -azu --exclude=log/* --exclude=logs/* --exclud e=temp/* /apps/service/emagsoftware 192.168.47.25::data/EGAP/ClientAutomatic/192 .168.40.21_emagsoftware$date
+[service@EGAP-END-40-21 ~]$ rsync -azu --exclude=log/* --exclude=logs/* --exclud e=temp/* /apps/usr/tomcat6_GHCDownload 192.168.47.25::data/EGAP/ClientAutomatic/ 192.168.40.21_tomcat
+[service@EGAP-END-40-21 ~]$ exit
+logout
+Connection to 192.168.40.21 closed.

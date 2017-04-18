@@ -1,0 +1,13 @@
+<devGroups timeout='30'>
+    <devGroup groupName='EGAP_AcSys' devEntry='ssh =username=@=ip=' enable='0'>
+        <devSeq>
+             <dev devName='EGAP-PRED-84-144.nd.cmgame.com' ip='192.168.84.144' password='' server='192.168.47.25' username='service' devPrompt='.*]\$'></dev>
+        </devSeq>
+        <cmdSeq>
+             <cmd seq='1' expect='=devPrompt=' send='date=`date +%Y%m%d -d"-0 day"`'></cmd>
+             <cmd seq='1' expect='=devPrompt=' send='echo $date'></cmd>
+             <cmd seq='1' expect='=devPrompt=' send='rsync -azu --exclude=log/* --exclude=logs/* --exclude=temp/* /apps/service/emagsoftware =server=::data/EGAP/GH_AcSys/=ip=_emagsoftware$date'></cmd>
+             <cmd seq='1' expect='=devPrompt=' send='exit'></cmd>
+        </cmdSeq>
+    </devGroup>
+</devGroups>
